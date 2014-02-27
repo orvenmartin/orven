@@ -1,0 +1,8 @@
+<! DOCTYPE Html>
+<?php
+<h2>
+You are Logged out,<?php echo anchor('blog/logout_view','Click to Log-in again');?>
+<h2>
+
+?>
+
