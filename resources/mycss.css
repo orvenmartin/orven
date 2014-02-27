@@ -1,0 +1,33 @@
+
+h1{
+text-shadow: 2px 2px mediumseagreen;
+}
+
+.link{
+text-decoration:none;
+color:green;
+}
+
+.link2{
+float:right;
+text-decoration:none;
+color:green;
+
+}
+
+.linked{
+
+float:right;
+color:blue;
+font-size: 15px;
+}
+a:hover{
+color:red;
+font-family: "Varela Round", Arial, Helvetica, sans-serif;
+font-size: 16px;
+}
+
+p{
+font-family: "Varela Round", Arial, Helvetica, sans-serif;
+font-size: 16px;
+}
