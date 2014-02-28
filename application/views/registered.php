@@ -4,7 +4,7 @@
 <body bgcolor="silver">
 <center><h1>Thank you!</h1> 
 			<p>
-			Registration successful. Visit
+			Registration successful. Go to
 			<?php echo anchor('/blog/login','Login Page',array('style'=>'text-decoration:none;'));?> to login again!
 			</p>
 
