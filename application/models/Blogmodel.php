@@ -52,7 +52,6 @@ class Blogmodel extends CI_Model
 			$password = $this->security->xss_clean($this->input->post('password'));
 			
 			$query = $this->db->get_where('user',array('username'=>$username,'password'=>$password));
-			//print_r($this->db->last_query());
 			
 				if($query->num_rows()>0)
 				{
@@ -76,8 +75,6 @@ class Blogmodel extends CI_Model
 		{    
 			$this->db->insert('user',$this); 
 		}  
-	
-
 }   
 
 ?>
