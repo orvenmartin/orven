@@ -7,7 +7,7 @@ class Blog extends CI_Controller{
 		
 		$this->load->helper('url');
 		$this->load->model('Blogmodel','Blog');
-		$this->output->enable_profiler(TRUE);
+		//$this->output->enable_profiler(TRUE);
 		
 	}	
 	
