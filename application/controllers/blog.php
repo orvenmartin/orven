@@ -166,7 +166,7 @@ class Blog extends CI_Controller{
 	public function logout_view()
 	{
 		$this->session->sess_destroy();
-		redirect('blog/login');	
+		$this->load->view('logout');	
 	}
 	
 }
