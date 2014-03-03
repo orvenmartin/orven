@@ -15,7 +15,7 @@
 			
 		<fieldset>
 		<div id="links">
-		<?php echo anchor('blog/guests','View Posts',array('class'=>'link')) ?> <br/>
+		<?php echo anchor('blog/register','Register',array('class'=>'link'))?><?php echo anchor('blog/guests','View Posts',array('class'=>'link')) ?> <br/>
 		</div>
 				<p> <label for="username"> Username </label> </p>
 				<p> <input type="text" id="username" name="username" placeholder="Username"> </p> 
