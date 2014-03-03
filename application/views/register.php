@@ -34,8 +34,9 @@
 				
 				<p><input type="submit" value="Register"></p>
 					
-			</fieldset>
-	</div> <!-- end login -->
+			</fieldset>		
+	</div> 
+	<!-- end login -->
 								
 	
 	
