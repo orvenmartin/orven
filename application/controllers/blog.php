@@ -9,8 +9,9 @@ class Blog extends CI_Controller{
 		$this->load->model('Blogmodel','Blog');
 		//$this->output->enable_profiler(TRUE);
 		
-	}	
+	}
 	
+	//VALIDATION
 	public function is_validated()
 	{
 		if ( $this->session->userdata('validated') == true && $this->session->userdata('username') != null) 
@@ -20,8 +21,9 @@ class Blog extends CI_Controller{
 			return FALSE;
 		}
 	}
+	//end
 	
-	
+	//FRONT PAGE
 	public function index()
 	{	
 		if($this->is_validated())
@@ -32,7 +34,9 @@ class Blog extends CI_Controller{
 		redirect('login');
 		}
 	}
-
+	//end
+	
+	//INSERTING DATA
 	public function post()
 	{
 		if($this->is_validated())
@@ -50,7 +54,9 @@ class Blog extends CI_Controller{
 		redirect('login');
 		}
 	}
+	//end
 	
+	//INSERTED DATA
 	public function items()
 	{
 		if($this->is_validated()){
@@ -63,13 +69,16 @@ class Blog extends CI_Controller{
 		}
 	}
 	
+	//INSERTED DATA
 	public function items2()
 	{
 		$data['view'] = $this->Blog->items_view();
 		$data['validated'] = $this->is_validated();
 		$this->load->view('items_view',$data);
 	}
+	//end
 	
+	//UPDATE
 	public function update()
 	{
 		if($this->is_validated())
@@ -103,7 +112,9 @@ class Blog extends CI_Controller{
 			redirect('login');
 		}
 	}
+	//end
 	
+	//DELETE
 	public function delete()
 	{
 		if($this->is_validated())
@@ -118,7 +129,9 @@ class Blog extends CI_Controller{
 		}
 	
 	}
+	//end
 
+	//LOGIN
 	public function login($msg = NULL)
 	{
 		if($this->is_validated()) 
@@ -130,6 +143,7 @@ class Blog extends CI_Controller{
 		
     }
 			
+			
 	public function process()
 	{
 	$result = $this->Blog->validate();
@@ -140,14 +154,17 @@ class Blog extends CI_Controller{
 			$this->login($msg);
 			}		
 	}
-	 
-	 //for viewing posts only
+	//end
+	
+	 //FOR VIEWING ONLY
 	public function guests()
 	{
 		$data['bloggg'] = $this->Blog->guest_view();
 		$this->load->view('guest',$data);
 	}
+	//end
 	
+	//REGISTRATION
 	public function register()
 	{
 		if ($this->input->post('reg') == 'register') 
@@ -162,12 +179,14 @@ class Blog extends CI_Controller{
 			$this->load->view('register');
 		}		
 	}
+	//end
 	
+	//LOGOUT
 	public function logout_view()
 	{
 		$this->session->sess_destroy();
 		$this->load->view('logout');	
 	}
-	
+	//end
 }
 ?>
