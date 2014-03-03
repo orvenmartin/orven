@@ -16,18 +16,18 @@
 		<fieldset>
 		
 				<p><label for="lastname">Firstname</label></p>
-				<p><input type="text" id="firstname" name="firstname" placeholder="Your Firstname"></p> 
+				<p><input type="text" id="firstname" name="firstname" placeholder="Firstname"></p> 
 
 				<p><label for="lastname">Lastname</label></p>
-				<p><input type="text" id="lastname" name="lastname" placeholder="Your Lastname"></p>
+				<p><input type="text" id="lastname" name="lastname" placeholder="Lastname"></p>
 				
 				
 				<p><label for="username">Username</label></p>
-				<p><input type="text" id="username" name="userame" placeholder="Your Username"></p>
+				<p><input type="text" id="username" name="userame" placeholder="Username"></p>
 				
 				
 				<p><label for="password">Password</label></p>
-				<p><input type="password" id="password" name="password" placeholder="Your Password"></p>
+				<p><input type="password" id="password" name="password" placeholder="Password"></p>
 				
 				
 				<?php echo anchor('blog/login','Return',array('class'=>'link2')); ?>
